@@ -17,5 +17,20 @@ public class TestRockPaperScissors{
         Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
     }
     
+    @Test
+    @Parameters({"1, rock, scissors", "2, scissors, rock"})
+    public void testRockBeatsScissors(int expected, String player1, String player2){
+        Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
+    }
+    
+    @Test
+    @Parameters({"1, scissors, paper", "2, paper, scissors"})
+    public void testScissorsBeatPaper(int expected, String player1, String player2){
+        Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
+    
+    }
+    
+    
+    
     
 }
