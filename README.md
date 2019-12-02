@@ -5,7 +5,7 @@ Files created during codemanship TDD training
 ### Fibonacci
 #### Technical Skills
 - parameterised tests
-Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
+  - Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
 
 #### Notes
 Try to write in this order:
