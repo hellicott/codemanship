@@ -92,3 +92,22 @@ If at the end of the timer the codes do not pass, you must revert to your previo
 ## Humpty Dumpty
 Try to write humpty dumpty as code. It should be easily readable. It should actually do 
 something
+
+## Stock Manager
+__Buy CD__
+1. payment accepted and CD in stock
+2. payment rejected
+3. not in stock
+
+__Search for CD__
+1. In catalogue
+2. Not in catalogue
+
+__Receieve CDs__
+1. Already in catalogue
+2. Add to catalogue
+3. Multiple titles
+
+__Review CD__
+1. Rating
+2. Leave text review
