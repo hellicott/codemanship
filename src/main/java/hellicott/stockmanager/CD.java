@@ -8,7 +8,7 @@ class CD{
     }
     
     void buy(PaymentThing pt){
-        if(pt.paymentAccepted()){
+        if((pt.paymentAccepted())&& (this.inStock())){
             this.stock--;
         }
     }
@@ -18,6 +18,6 @@ class CD{
     }
     
     boolean inStock(){
-        return true;
+        return getStock() > 0;
     }
 }

@@ -40,6 +40,22 @@ public class TestBuyCd{
         Assert.assertEquals(2, cd.getStock());
     }
     
+    @Test
+    public void testBuyWhenNotInStock(){
+        // arrange
+        PaymentThing pt = new PaymentThing(){
+            @Override
+            boolean paymentAccepted(){
+                return true;
+            }
+        };
+        CD cd = new CD(0);
+        // act
+        cd.buy(pt);
+        // assert
+        Assert.assertEquals(0, cd.getStock());
+    }
+    
 
     
   
