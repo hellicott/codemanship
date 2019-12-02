@@ -10,19 +10,37 @@ Refactoring: Improving the design of existing code _by Martin Fowler_
 A test should only have one reason to fail. You should never have multiple assert 
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
+
 #### Refactoring
 You want to get the code to green in the safest, most atomic steps. After every single
 refactoring step rerun the tests to ensure each step hasn't broken anything. 
 
 You should be using version control to ensure that you can go back to the last thing 
 that worked easily.
+
 ### Design
-Most important things in software design
-1. It works
-2. Clearly communicate its intent
+Most important things in software design...
+1. __It works.__ If it doesn't work then there's no point in it being there
+2. __Clearly communicates its intent.__ You shouldn't have to read anything other than 
+the code to know what it is for. Write code for the problem - use language appropriate 
+to the problem you are solving. E.g. In a train seat reservation service use names like
+`Passenger` rather than `User`, `Seat` rather than `Place`, `reserve()` rather than 
+`allocate()`. Use the words already in the requirements.
+3. __Low in duplication.__ When you see something duplicated for the 3rd time, it 
+should be extracted out into it's own reusable code. **D**on't **R**epeat **Y**ourself
+4. __Simple as possible.__ Don't write anything before it's required **Y**ou 
+**A**in't **G**onna **N**eed **I**t
 
 As soon as you change your code, it is like Schrodinger's code. It both passes and 
-fails all tests. The only way you can know is by running the tests again.
+fails all tests. The only way you can know is by running the tests again. 
+
+__SOLID__
+- **S**ingle responsibility
+- **O**
+- **L**
+- **I**
+- **D**
+
 
 # Exersises
 ## Fibonacci
