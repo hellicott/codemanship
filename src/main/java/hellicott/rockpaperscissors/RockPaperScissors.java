@@ -1,22 +1,25 @@
 package hellicott.rockpaperscissors;
 
-public class RockPaperScissors{
-    int vs(String player1, String player2){
+class RockPaperScissors{
+    enum RPS{
+        ROCK, PAPER, SCISSORS
+    }
+    int vs(RPS player1, RPS player2){
         if(player1.equals(player2)){
             return 0;
         }
-        if(player1.equals("scissors")){
-            if(player2.equals("rock")){
+        if(player1.equals(RPS.SCISSORS)){
+            if(player2.equals(RPS.ROCK)){
                 return 2;
             }
         }
-        if(player1.equals("paper")){
-            if((player2.equals("scissors"))){
+        if(player1.equals(RPS.PAPER)){
+            if((player2.equals(RPS.SCISSORS))){
                 return 2;
             }
         }
-        if(player1.equals("rock")){
-            if(player2.equals("paper")){
+        if(player1.equals(RPS.ROCK)){
+            if(player2.equals(RPS.PAPER)){
                 return 2;
             }
         }
