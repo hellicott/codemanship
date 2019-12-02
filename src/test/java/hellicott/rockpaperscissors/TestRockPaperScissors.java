@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
 public class TestRockPaperScissors{
     
     @Test
-    @Parameters({"1, rock, scissors", "1, scissors, paper", "1, paper, rock"})
+    @Parameters({"1, rock, scissors", "1, scissors, paper", "1, paper, rock",
+                 "2, scissors, rock", "2, paper, scissors", "2, rock, paper"})
     public void testCorrectPlayerWins(int expected, String player1, String player2){
         Assert.assertEquals(expected, vs(player1, player2));
     }
