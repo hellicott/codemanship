@@ -9,32 +9,41 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitParamsRunner.class)
 public class TestBuyCd{
     @Test
-    @Parameters({})
     public void testBuyWhenPaymentAcceptedAndInStock(){
         // arrange
-        PaymentThing pt = new PaymentThing();
-        CD cd = new CD();
+        PaymentThing pt = new PaymentThing(){
+            @Override
+            boolean paymentAccepted(){
+                return true;
+            }
+        };
+        CD cd = new CD(2);
         StockManager stockManager = new StockManager(pt);
-        
-        int originalStock = cd.getStock();
         // act
-        stockManager.buy(cd, pt);
+        cd.buy(pt);
         // assert
-        Assert.assertEquals(originalStock -1, cd.getStock());
+        Assert.assertEquals(1, cd.getStock());
     }
     
     class StockManager{
         StockManager(PaymentThing pt){
-        
-        }
-        void buy(CD cd, PaymentThing pt){
-        
+    
         }
     }
     
     class CD{
+        private int stock;
+        
+        CD(int stock){
+            this.stock = stock;
+        }
+        
+        void buy(PaymentThing pt){
+            this.stock--;
+        }
+        
         int getStock(){
-            return 1;
+            return this.stock;
         }
         
         boolean inStock(){
@@ -44,7 +53,7 @@ public class TestBuyCd{
     
     class PaymentThing{
         boolean paymentAccepted(){
-            return True;
+            return true;
         }
     }
 }

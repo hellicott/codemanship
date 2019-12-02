@@ -95,7 +95,7 @@ something
 
 ## Stock Manager
 __Buy CD__
-1. payment accepted and CD in stock
+1. /payment accepted and CD in stock
 2. payment rejected
 3. not in stock
 
