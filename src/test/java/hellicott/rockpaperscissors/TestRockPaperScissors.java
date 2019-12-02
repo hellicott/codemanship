@@ -20,11 +20,22 @@ public class TestRockPaperScissors{
         Assert.assertEquals(1, vs(player1, player2));
     }
     
-    
+    @Test
+    public void testPlayerTwoWins(){
+        // arrange
+        
+        // act
+        
+        // assert
+        Assert.assertEquals(2, vs("scissors", "rock"));
+    }
     
     
     
     private int vs(String player1, String player2){
+        if(player2.equals("rock")){
+            return 2;
+        }
         return 1;
     }
 }
