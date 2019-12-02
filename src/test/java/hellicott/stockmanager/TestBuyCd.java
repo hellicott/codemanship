@@ -9,6 +9,23 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitParamsRunner.class)
 public class TestBuyCd{
     @Test
+    @Parameters({"true, 2, 1", "false, 2, 2", "true, 0, 0", "false, 0, 0"})
+    public void testBuy(final boolean paymentAccepted, int stock, int expected){
+        // arrange
+        PaymentThing pt = new PaymentThing(){
+            @Override
+            boolean paymentAccepted(){
+                return paymentAccepted;
+            }
+        };
+        CD cd = new CD(stock);
+        // act
+        cd.buy(pt);
+        // assert
+        Assert.assertEquals(expected, cd.getStock());
+    }
+    
+    @Test
     public void testBuyWhenPaymentAcceptedAndInStock(){
         // arrange
         PaymentThing pt = new PaymentThing(){
@@ -55,9 +72,5 @@ public class TestBuyCd{
         // assert
         Assert.assertEquals(0, cd.getStock());
     }
-    
-
-    
-  
     
 }
