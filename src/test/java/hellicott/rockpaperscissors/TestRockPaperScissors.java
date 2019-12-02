@@ -11,15 +11,10 @@ public class TestRockPaperScissors{
     
     @Test
     @Parameters({"1, rock, scissors", "1, scissors, paper", "1, paper, rock",
-                 "2, scissors, rock", "2, paper, scissors", "2, rock, paper"})
+                 "2, scissors, rock", "2, paper, scissors", "2, rock, paper",
+                 "0, rock, rock", "0, paper, paper", "0, scissors, scissors"})
     public void testCorrectPlayerWins(int expected, String player1, String player2){
         Assert.assertEquals(expected, vs(player1, player2));
-    }
-    
-    @Test
-    @Parameters({"scissors, rock", "paper, scissors", "rock, paper"})
-    public void testPlayerTwoWins(String player1, String player2){
-        Assert.assertEquals(2, vs(player1, player2));
     }
     
     @Test
