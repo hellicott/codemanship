@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 public class TestRockPaperScissors{
     
     @Test
-    @Parameters({"rock, scissors", "scissors, paper"})
+    @Parameters({"rock, scissors", "scissors, paper", "paper, rock"})
     public void testCorrectPlayerWins(String player1, String player2){
         // arrange
         
@@ -43,10 +43,11 @@ public class TestRockPaperScissors{
     
     
     private int vs(String player1, String player2){
+        
         if(player1.equals(player2)){
             return 0;
         }
-        if(player2.equals("rock")){
+        if((player2.equals("rock")) && (player1.equals("scissors"))){
             return 2;
         }
         return 1;
