@@ -14,28 +14,8 @@ public class TestRockPaperScissors{
                  "2, scissors, rock", "2, paper, scissors", "2, rock, paper",
                  "0, rock, rock", "0, paper, paper", "0, scissors, scissors"})
     public void testCorrectPlayerWins(int expected, String player1, String player2){
-        Assert.assertEquals(expected, vs(player1, player2));
+        Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
     }
     
-    private int vs(String player1, String player2){
-        if(player1.equals(player2)){
-            return 0;
-        }
-        if(player1.equals("scissors")){
-            if(player2.equals("rock")){
-                return 2;
-            }
-        }
-        if(player1.equals("paper")){
-            if((player2.equals("scissors"))){
-                return 2;
-            }
-        }
-        if(player1.equals("rock")){
-            if(player2.equals("paper")){
-                return 2;
-            }
-        }
-        return 1;
-    }
+    
 }
