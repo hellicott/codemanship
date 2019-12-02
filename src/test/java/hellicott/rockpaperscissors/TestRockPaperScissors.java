@@ -16,13 +16,9 @@ public class TestRockPaperScissors{
     }
     
     @Test
-    public void testPlayerTwoWins(){
-        Assert.assertEquals(2, vs("scissors", "rock"));
-    }
-    
-    @Test
-    public void testPlayerTwoPS(){
-        Assert.assertEquals(2, vs("paper", "scissors"));
+    @Parameters({"scissors, rock", "paper, scissors", "rock, paper"})
+    public void testPlayerTwoWins(String player1, String player2){
+        Assert.assertEquals(2, vs(player1, player2));
     }
     
     @Test
@@ -44,6 +40,11 @@ public class TestRockPaperScissors{
         }
         if(player1.equals("paper")){
             if((player2.equals("scissors"))){
+                return 2;
+            }
+        }
+        if(player1.equals("rock")){
+            if(player2.equals("paper")){
                 return 2;
             }
         }
