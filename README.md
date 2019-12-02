@@ -1,13 +1,29 @@
 # codemanship
 Files created during codemanship TDD training
+## Reading list
+Test Driven Development: By Example _by Kent Beck_
+
+Refactoring: Improving the design of existing code _by Martin Fowler_
+
+## Notes
+#### Tests
+A test should only have one reason to fail. You should never have multiple assert 
+statements. If you have multiple things to assert, you should have a set up method to 
+do the shared code, but then separate tests for each assert statement.
+#### Refactoring
+You want to get the code to green in the safest, most atomic steps. After every single
+refactoring step rerun the tests to ensure each step hasn't broken anything. 
+
+You should be using version control to ensure that you can go back to the last thing 
+that worked easily.
+
 
 # Exersises
 ## Fibonacci
-### Technical Skills
-- parameterised tests
-  - Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
+__Parameterised tests__
 
-### Notes
+Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
+
 Try to write in this order:
 - Name test
 - Write assertion
@@ -19,3 +35,5 @@ Try to write in this order:
   - If not - refactor!
 - After any refactoring 
   - Run the tests to make sure you've not broken anything
+
+## 

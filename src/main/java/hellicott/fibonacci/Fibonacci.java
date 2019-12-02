@@ -1,6 +1,6 @@
 package hellicott.fibonacci;
 
-public class Fibonacci{
+class Fibonacci{
     int fibonacciAt(int index){
         if(index<2){
             return index;
