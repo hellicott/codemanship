@@ -37,11 +37,15 @@ public class TestRockPaperScissors{
         if(player1.equals(player2)){
             return 0;
         }
-        if((player2.equals("rock")) && (player1.equals("scissors"))){
-            return 2;
+        if(player1.equals("scissors")){
+            if(player2.equals("rock")){
+                return 2;
+            }
         }
-        if((player2.equals("scissors")) && (player1.equals("paper"))){
-            return 2;
+        if(player1.equals("paper")){
+            if((player2.equals("scissors"))){
+                return 2;
+            }
         }
         return 1;
     }
