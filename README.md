@@ -25,21 +25,39 @@ Most important things in software design...
 the code to know what it is for. Write code for the problem - use language appropriate 
 to the problem you are solving. E.g. In a train seat reservation service use names like
 `Passenger` rather than `User`, `Seat` rather than `Place`, `reserve()` rather than 
-`allocate()`. Use the words already in the requirements.
+`allocate()`. Use the words already in the requirements - you should be able to read it 
+like a sentence, it should tell a story.
 3. __Low in duplication.__ When you see something duplicated for the 3rd time, it 
-should be extracted out into it's own reusable code. **D**on't **R**epeat **Y**ourself
+should be extracted out into it's own reusable code. **D**on't **R**epeat **Y**ourself 
+unless repeating yourself makes the code a lot easier to understand.
 4. __Simple as possible.__ Don't write anything before it's required **Y**ou 
 **A**in't **G**onna **N**eed **I**t
-
-As soon as you change your code, it is like Schrodinger's code. It both passes and 
-fails all tests. The only way you can know is by running the tests again. 
-
-__SOLID__
-- **S**ingle responsibility
-- **O**
-- **L**
-- **I**
-- **D**
+5. __Single responsibility.__ They do one job and make anything else _somebody else's problem_
+6. __Tell don't ask.__ _Feature envy_ is when a method in one class has an unhealthy use of 
+features in another class. It implies this method is in the wrong place.
+    ```
+    class CarpetQuote:
+    method CalcAreaOfCarpet(){
+        room.getWidth * room.getLength;
+    }
+    ```
+    should instead be
+    ```
+    class CarpetQuote:
+    method CalcAreaOfCarpet(){
+        room.CalcAreaOfRoom();
+    }
+    ```
+    This is a good example of _Somebody else's Problem_ instead of _Feature Envy_. Another 
+    advantage of doing this means that now you can have a room of a different shape. It no 
+    longer matters to `CarpetQuote` it's all `Room`'s problem.
+    As soon as you change your code, it is like Schrodinger's code. It both passes and 
+    fails all tests. The only way you can know is by running the tests again. 
+7. __Swappable dependencies.__ A class that uses another object shouldn't care about 
+implementation of that object. Dependency injection allows this and allows mocking too.
+8. __Client specific interfaces.__ This allows you to only expose to a client the parts that
+they care about. It allows you to hide things that don't need to be seen by a client so they 
+are not affected by changes to things they are not using.
 
 
 # Exersises
@@ -60,8 +78,6 @@ Try to write in this order:
   - Run the tests to make sure you've not broken anything
 
 ## Rock paper scissors
-__The task__
-
 Write a rock paper scissors game but whenever the codes are red, you must make them green within a 60 second timer.
 If at the end of the timer the codes do not pass, you must revert to your previous commit when it was green
 
@@ -72,3 +88,7 @@ If at the end of the timer the codes do not pass, you must revert to your previo
 - avoid repeated tests by parameterising
 - only create methods, classes, parameters when you need to
 - get back to working code as quickly as possible
+
+## Humpty Dumpty
+Try to write humpty dumpty as code. It should be easily readable. It should actually do 
+something
