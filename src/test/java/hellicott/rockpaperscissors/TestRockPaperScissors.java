@@ -10,14 +10,6 @@ import org.junit.runner.RunWith;
 public class TestRockPaperScissors{
     
     @Test
-    @Parameters({"1, rock, scissors", "1, scissors, paper", "1, paper, rock",
-                 "2, scissors, rock", "2, paper, scissors", "2, rock, paper",
-                 "0, rock, rock", "0, paper, paper", "0, scissors, scissors"})
-    public void testCorrectPlayerWins(int expected, String player1, String player2){
-        Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
-    }
-    
-    @Test
     @Parameters({"1, rock, scissors", "2, scissors, rock"})
     public void testRockBeatsScissors(int expected, String player1, String player2){
         Assert.assertEquals(expected, new RockPaperScissors().vs(player1, player2));
@@ -36,8 +28,9 @@ public class TestRockPaperScissors{
     }
     
     @Test
-    public void testDrawReturns0(){
-        Assert.assertEquals(0, new RockPaperScissors().vs("rock", "rock"));
+    @Parameters({"rock, rock", "paper, paper", "scissors, scissors"})
+    public void testDrawReturns0(String player1, String player2){
+        Assert.assertEquals(0, new RockPaperScissors().vs(player1, player2));
     }
     
 }
