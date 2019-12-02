@@ -30,9 +30,22 @@ public class TestRockPaperScissors{
         Assert.assertEquals(2, vs("scissors", "rock"));
     }
     
+    @Test
+    public void testReturnsZeroWhenDraw(){
+        // arrange
+        
+        // act
+        
+        // assert
+        Assert.assertEquals(0, vs("rock", "rock"));
+    }
+    
     
     
     private int vs(String player1, String player2){
+        if(player1.equals(player2)){
+            return 0;
+        }
         if(player2.equals("rock")){
             return 2;
         }
