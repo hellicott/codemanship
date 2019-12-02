@@ -16,7 +16,13 @@ refactoring step rerun the tests to ensure each step hasn't broken anything.
 
 You should be using version control to ensure that you can go back to the last thing 
 that worked easily.
+### Design
+Most important things in software design
+1. It works
+2. Clearly communicate its intent
 
+As soon as you change your code, it is like Schrodinger's code. It both passes and 
+fails all tests. The only way you can know is by running the tests again.
 
 # Exersises
 ## Fibonacci
