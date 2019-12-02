@@ -22,14 +22,14 @@ public class TestRockPaperScissors{
     }
     
     @Test
-    public void testReturnsZeroWhenDraw(){
-        Assert.assertEquals(0, vs("rock", "rock"));
+    @Parameters({"rock, rock", "paper, paper", "scissors, scissors"})
+    public void testReturnsZeroWhenDraw(String player1, String player2){
+        Assert.assertEquals(0, vs(player1, player2));
     }
     
     
     
     private int vs(String player1, String player2){
-        
         if(player1.equals(player2)){
             return 0;
         }
