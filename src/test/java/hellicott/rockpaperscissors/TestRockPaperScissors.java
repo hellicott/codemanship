@@ -12,31 +12,21 @@ public class TestRockPaperScissors{
     @Test
     @Parameters({"rock, scissors", "scissors, paper", "paper, rock"})
     public void testCorrectPlayerWins(String player1, String player2){
-        // arrange
-        
-        // act
-        
-        // assert
         Assert.assertEquals(1, vs(player1, player2));
     }
     
     @Test
     public void testPlayerTwoWins(){
-        // arrange
-        
-        // act
-        
-        // assert
         Assert.assertEquals(2, vs("scissors", "rock"));
     }
     
     @Test
+    public void testPlayerTwoPS(){
+        Assert.assertEquals(2, vs("paper", "scissors"));
+    }
+    
+    @Test
     public void testReturnsZeroWhenDraw(){
-        // arrange
-        
-        // act
-        
-        // assert
         Assert.assertEquals(0, vs("rock", "rock"));
     }
     
@@ -48,6 +38,9 @@ public class TestRockPaperScissors{
             return 0;
         }
         if((player2.equals("rock")) && (player1.equals("scissors"))){
+            return 2;
+        }
+        if((player2.equals("scissors")) && (player1.equals("paper"))){
             return 2;
         }
         return 1;
