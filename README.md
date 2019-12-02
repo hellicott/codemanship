@@ -20,7 +20,6 @@ that worked easily.
 
 # Exersises
 ## Fibonacci
-__Parameterised tests__
 
 Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
 
@@ -36,4 +35,16 @@ Try to write in this order:
 - After any refactoring 
   - Run the tests to make sure you've not broken anything
 
-## 
+## Rock paper scissors
+__The task__
+
+Write a rock paper scissors game but whenever the codes are red, you must make them green within a 60 second timer.
+If at the end of the timer the codes do not pass, you must revert to your previous commit when it was green
+
+- write a test that fails
+- get test to pass
+- refactor
+- move on to next test
+- avoid repeated tests by parameterising
+- only create methods, classes, parameters when you need to
+- get back to working code as quickly as possible
