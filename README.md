@@ -121,3 +121,6 @@ __Receieve CDs__
 __Review CD__
 1. Rating
 2. Leave text review
+
+We added stubs as test doubles to allow us to test with set definitions
+of whether the method would return true or false.
