@@ -9,8 +9,7 @@ public class TestSearchCds{
         // arrange
         CdInfo cd = new CD(2, "", "");
         String[] cdInfo = {"Ain't no party like an S Club Party", "S Club 7"};
-        Payment pt = new TestBuyCd.PaymentStub(true);
-        StockManager stockManager = new StockManager(pt);
+        StockManager stockManager = new StockManager(null);
         // assert
         Assert.assertEquals(true, stockManager.inCatalogue(cdInfo));
     }

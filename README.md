@@ -19,6 +19,49 @@ __Types Of Tests__
 |integration|contracts between components|100s|
 |system|configurations|10s|
 
+#### Mocking
+__Stub__
+
+If it's there and you need to force the return value of a method, it is a stub. It is a part of the test set up.
+It can be done with or with out a mock object.
+
+Without mock object:
+```$xslt
+// usage
+Payment pt = new PaymentStub(true);
+
+// stub class
+static class PaymentStub implements Payment{
+        private boolean accepted;
+        
+        PaymentStub(boolean paymentAccepted){
+            this.accepted = paymentAccepted;
+        }
+        
+        public boolean paymentAccepted(){
+            return this.accepted;
+        }
+    }
+```
+
+With mock object:
+```$xslt
+
+```
+__dummy__
+
+When you need to provide a class with a mock object but you don't care about it. For example it will not be used
+in the test you are writing. It can be done with or without mock objects.
+
+Without mock object:
+```
+StockManager stockManager = new StockManager(null);
+```
+
+With mock object:
+```
+StockManager stockManager = new StockManager(mock(Payment.class));
+```
 
 #### Refactoring
 You want to get the code to green in the safest, most atomic steps. After every single

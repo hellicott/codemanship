@@ -1,5 +1,6 @@
 package hellicott.stockmanager;
 
+import org.mockito.Mockito;
 import junitparams.JUnitParamsRunner;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,10 +12,11 @@ public class TestBuyCd{
     @Test
     public void testBuyWhenPaymentAcceptedAndInStock(){
         // arrange
-        Payment pt = new PaymentStub(true);
+        Payment mockPt = Mockito.mock(Payment.class);
+        Mockito.when(mockPt.paymentAccepted()).thenReturn(true);
         CD cd = new CD(2, "", "");
         // act
-        cd.buy(pt);
+        cd.buy(mockPt);
         // assert
         Assert.assertEquals(1, cd.getStock());
     }
