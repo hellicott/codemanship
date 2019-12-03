@@ -200,19 +200,29 @@ of whether the method would return true or false.
 1. Which retailer gives the customer the lowest price for a specific make and model?
 2. Inform Ad Targeting what make and model they're interested in.
 
-## Working with a customer
-1. The customer needs to have a problem solvable by a software solution.   
+While writing this used a `@Before` tag on a set up of a test so that I could separate 
+the two asserts I wanted to make into different tests without duplicating code.
+
+## Solving a problem
+[code](src/main/java/hellicott/problemgenerator) | [tests](src/test/java/hellicott/problemgenerator)
+
+
+1. The customer needs to have a problem solvable by a software solution.
+    START WITH A GOAL  
     > It's really difficult to come up with ideas that software can solve
 2. You need a headline feature. The one that solves the problem.
+    THINK OF A HEADLINE FEATURE
     _Ask "If there was a magic button which solved the problem, what would it do?"_
     > Generate a software-solvable problem
 3. Come up with supporting features. Other things as part of the solution.
+    CREATE FEATURE TESTS BASED ON SUPPORTING FEATURES
     > A machine learning algorithm which generates problems based on user input
                                                                  
     > A website/app where people can input problems they want to be solved
                                                                                                                                                                                                                    
     > A website/app which can show a user a problem generated from the ML algorithm
 4. Come up with tests and examples
+    LET THE FEATURES DECIDE WHICH UNIT TESTS YOU END UP NEEDING
 ```
 GIVEN   I need a problem
 WHEN    I click "generate problem"
@@ -233,3 +243,12 @@ WHEN    I enter a tag
 AND     I click "generate problem"
 THEN    I am shown a problem related to the tag
 ```
+
+# Next Steps
+- Code Katas are a good way to practice with mini problem solving exercises
+  - I find [code wars](https://www.codewars.com/) a great source of coding Katas
+- Try to do some TDD every week
+  - The more you do it, the easier it will be and the more you'll feel you're making 
+  progress
+- Any questions, you can email Jason and he'll try to reply within 48 hours
+  - training@codemanship.com
