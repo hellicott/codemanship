@@ -1,9 +1,15 @@
 # codemanship
-Files created during codemanship TDD training
-## Reading list
-Test Driven Development: By Example _by Kent Beck_
+Files and notes created during [codemanship TDD training](http://www.codemanship.co.uk/tdd.html)
+with [Jason Gorman](http://www.codemanship.co.uk/about.html).
 
-Refactoring: Improving the design of existing code _by Martin Fowler_
+## Reading list
+Along with [Jason's TDD book](http://www.codemanship.co.uk/tdd_jasongorman_codemanship.pdf), there is other books he recommends to complement the course
+
+[Test Driven Development: By Example](https://smile.amazon.co.uk/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530/ref=sr_1_1?_encoding=UTF8&hvadid=80607977998258&hvbmt=be&hvdev=c&hvqmt=e&keywords=test+driven+development+kent+beck&qid=1575388729&sr=8-1) 
+_by Kent Beck_
+
+[Refactoring: Improving the design of existing code](https://smile.amazon.co.uk/Refactoring-Improving-Existing-Addison-Wesley-Technology/dp/0134757599/ref=sr_1_1?crid=3J8Q4RZHK3JIM&keywords=refactoring+improving+the+design+of+existing+code&qid=1575388819&sprefix=refactoring+%2Caps%2C145&sr=8-1)
+_by Martin Fowler_
 
 ## Notes
 ### Tests
