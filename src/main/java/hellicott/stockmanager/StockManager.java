@@ -4,4 +4,7 @@ class StockManager{
     StockManager(PaymentThing pt){
     
     }
+    boolean inCatalogue(){
+        return true;
+    }
 }
