@@ -208,20 +208,25 @@ the two asserts I wanted to make into different tests without duplicating code.
 
 
 1. The customer needs to have a problem solvable by a software solution.
+
     START WITH A GOAL  
     > It's really difficult to come up with ideas that software can solve
 2. You need a headline feature. The one that solves the problem.
+
     THINK OF A HEADLINE FEATURE
+    
     _Ask "If there was a magic button which solved the problem, what would it do?"_
     > Generate a software-solvable problem
 3. Come up with supporting features. Other things as part of the solution.
+
     CREATE FEATURE TESTS BASED ON SUPPORTING FEATURES
     > A machine learning algorithm which generates problems based on user input
                                                                  
-    > A website/app where people can input problems they want to be solved
-                                                                                                                                                                                                                   
+    > A website/app where people can input problems they want to be solve
+
     > A website/app which can show a user a problem generated from the ML algorithm
 4. Come up with tests and examples
+
     LET THE FEATURES DECIDE WHICH UNIT TESTS YOU END UP NEEDING
 ```
 GIVEN   I need a problem
