@@ -17,7 +17,7 @@ A test should only have one reason to fail. You should never have multiple asser
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
 
-####Types Of Tests
+#### Types Of Tests
 
 |Test Type|What it's testing| How many|
 |---|---|---|
