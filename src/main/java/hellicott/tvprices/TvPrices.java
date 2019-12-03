@@ -1,5 +1,8 @@
 package hellicott.tvprices;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 class TvPrices{
     Retailer[] retailers;
     TvPrices(Retailer[] retailers){
@@ -7,7 +10,11 @@ class TvPrices{
     }
     
     String findCheapest(String make, String model){
-        
-        return this.retailers[0].getName();
+        ArrayList<Double> prices = new ArrayList<Double>();
+        for(Retailer retailer:this.retailers){
+            prices.add(retailer.getPrice(make, model));
+        }
+        int index = prices.indexOf(Collections.min(prices));
+        return this.retailers[index].getName();
     }
 }
