@@ -175,3 +175,9 @@ __Review CD__
 
 We added stubs as test doubles to allow us to test with set definitions
 of whether the method would return true or false.
+
+
+## Tv prices
+[code](src/main/java/hellicott/tvprices) | [tests](src/test/java/hellicott/tvprices)
+1. Which retailer gives the customer the lowest price for a specific make and model?
+2. Inform Ad Targeting what make and model they're interested in.
