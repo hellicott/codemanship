@@ -6,8 +6,8 @@ class TvPrices{
         this.retailers = retailers;
     }
     
-    static String findCheapest(String make, String model){
+    String findCheapest(String make, String model){
         
-        return "Televizion";
+        return this.retailers[0].getName();
     }
 }

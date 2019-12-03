@@ -12,7 +12,7 @@ public class TestCheapestPrice{
         Retailer atv = new RetailerStub(25.55, "Acme TV");
         TvPrices tvPrices = new TvPrices(new Retailer[]{t, sb, atv});
         // assert
-        Assert.assertEquals("Televizion", TvPrices.findCheapest("make", "model"));
+        Assert.assertEquals("Televizion", tvPrices.findCheapest("make", "model"));
     }
     
     static class RetailerStub implements Retailer{
