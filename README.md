@@ -11,15 +11,14 @@ A test should only have one reason to fail. You should never have multiple asser
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
 
-__Types Of Tests__
-
+####Types Of Tests
 |Test Type|What it's testing| How many|
 |---|---|---|
 |unittests|logic|1000s|
 |integration|contracts between components|100s|
 |system|configurations|10s|
 
-__How do I know what tests to write?__
+#### How do I know what tests to write?
 
 What **unit tests** should I write?
 _The ones you need to pass the customer tests_
@@ -184,7 +183,6 @@ __Review CD__
 
 We added stubs as test doubles to allow us to test with set definitions
 of whether the method would return true or false.
-
 
 ## Tv prices
 [code](src/main/java/hellicott/tvprices) | [tests](src/test/java/hellicott/tvprices)
