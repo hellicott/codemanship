@@ -1,7 +1,6 @@
 package hellicott.stockmanager;
 
 import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

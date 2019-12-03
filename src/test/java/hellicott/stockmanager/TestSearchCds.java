@@ -7,11 +7,12 @@ public class TestSearchCds{
     @Test
     public void testInCatalogue(){
         // arrange
-        ICD cd = new ICD();
+        //CdInfo cd = new CdInfo(){
+        String[] cdInfo = {"Ain't no party like an S Club Party", "S Club 7"};
         PaymentThing pt = new PaymentThing();
         StockManager stockManager = new StockManager(pt);
         // assert
-        Assert.assertEquals(true, stockManager.inCatalogue());
+        Assert.assertEquals(true, stockManager.inCatalogue(cdInfo));
     }
     
     
