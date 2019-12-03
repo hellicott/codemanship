@@ -95,10 +95,10 @@ something
 
 ## Stock Manager
 __Buy CD__
-1. /payment accepted and CD in stock
-2. /payment rejected
-3. /not in stock
-4. /neither
+1. Payment accepted and CD in stock
+2. Payment rejected
+3. Not in stock
+4. Neither
 
 __Search for CD__
 1. In catalogue
