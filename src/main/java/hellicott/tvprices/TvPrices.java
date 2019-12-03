@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class TvPrices{
-    Retailer[] retailers;
+    private Retailer[] retailers;
     TvPrices(Retailer[] retailers){
         this.retailers = retailers;
     }
