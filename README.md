@@ -97,7 +97,8 @@ something
 __Buy CD__
 1. /payment accepted and CD in stock
 2. /payment rejected
-3. not in stock
+3. /not in stock
+4. /neither
 
 __Search for CD__
 1. In catalogue
