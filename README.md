@@ -159,6 +159,10 @@ If at the end of the timer the codes do not pass, you must revert to your previo
 Try to write humpty dumpty as code. It should be easily readable. It should actually do 
 something
 
+Here's the output of the program I wrote:
+![alt text](img/humptyDumptyOutputPNG.PNG "Humpty Dumpty Output")
+
+
 ## Stock Manager
 [code](src/main/java/hellicott/stockmanager) | [tests](src/test/java/hellicott/stockmanager)
 
