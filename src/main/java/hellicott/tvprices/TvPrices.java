@@ -9,12 +9,17 @@ class TvPrices{
         this.retailers = retailers;
     }
     
-    String findCheapest(String make, String model){
-        ArrayList<Double> prices = new ArrayList<Double>();
+    ArrayList<Retailer> findCheapest(String make, String model){
+        ArrayList<Retailer> cheapestRetailers = new ArrayList<Retailer>();
         for(Retailer retailer:this.retailers){
-            prices.add(retailer.getPrice(make, model));
+            if((cheapestRetailers.size() == 0)
+                    || (retailer.getPrice(make, model) == cheapestRetailers.get(0).getPrice(make, model))){
+                cheapestRetailers.add(retailer);
+            }else if (retailer.getPrice(make, model) < cheapestRetailers.get(0).getPrice(make, model)){
+                cheapestRetailers.clear();
+                cheapestRetailers.add(retailer);
+            }
         }
-        int index = prices.indexOf(Collections.min(prices));
-        return this.retailers[index].getName();
+        return cheapestRetailers;
     }
 }
