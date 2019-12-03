@@ -4,12 +4,13 @@ interface CdInfo{
     public String[] getInfo();
 }
 
-class CD{
+class CD implements CdInfo{
     private int stock;
     
     CD(int stock){
         this.stock = stock;
     }
+    
     
     void buy(PaymentThing pt){
         if((pt.paymentAccepted())&& (this.inStock())){
@@ -23,5 +24,9 @@ class CD{
     
     boolean inStock(){
         return getStock() > 0;
+    }
+    
+    public String[] getInfo(){
+        return new String[0];
     }
 }
