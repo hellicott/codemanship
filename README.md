@@ -19,6 +19,17 @@ __Types Of Tests__
 |integration|contracts between components|100s|
 |system|configurations|10s|
 
+__How do I know what tests to write?__
+
+What **unit tests** should I write?
+_The ones you need to pass the customer tests_
+
+What **customer tests** should I write?
+_The ones you need to create the features_
+
+What **feature tests** do I need to do?
+_The ones you need to achieve the goals of the business_
+
 #### Mocking
 __Stub__
 
@@ -112,7 +123,6 @@ implementation of that object. Dependency injection allows this and allows mocki
 they care about. It allows you to hide things that don't need to be seen by a client so they 
 are not affected by changes to things they are not using.
 
-
 # Exersises
 ## Fibonacci
 [code](src/main/java/hellicott/fibonacci) | [tests](src/test/java/hellicott/fibonacci)
@@ -181,3 +191,37 @@ of whether the method would return true or false.
 [code](src/main/java/hellicott/tvprices) | [tests](src/test/java/hellicott/tvprices)
 1. Which retailer gives the customer the lowest price for a specific make and model?
 2. Inform Ad Targeting what make and model they're interested in.
+
+## Working with a customer
+1. The customer needs to have a problem solvable by a software solution.   
+    > It's really difficult to come up with ideas that software can solve
+2. You need a headline feature. The one that solves the problem.
+    _Ask "If there was a magic button which solved the problem, what would it do?"_
+    > Generate a software-solvable problem
+3. Come up with supporting features. Other things as part of the solution.
+    > A machine learning algorithm which generates problems based on user input
+                                                                 
+    > A website/app where people can input problems they want to be solved
+                                                                                                                                                                                                                   
+    > A website/app which can show a user a problem generated from the ML algorithm
+4. Come up with tests and examples
+```
+GIVEN   I need a problem
+WHEN    I click "generate problem"
+THEN    I am shown a problem
+```
+
+```
+GIVEN   I have a problem
+WHEN    I enter it into the website
+AND     I enter a related tag(s)
+THEN    The problem and tag gets saved to the database
+AND     The problem contributes to the machine learning algorithm
+```
+
+```
+GIVEN   I want a problem with a theme
+WHEN    I enter a tag
+AND     I click "generate problem"
+THEN    I am shown a problem related to the tag
+```
