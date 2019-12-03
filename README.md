@@ -11,6 +11,15 @@ A test should only have one reason to fail. You should never have multiple asser
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
 
+__Types Of Tests__
+
+|Test Type|What it's testing| How many|
+|---|---|---|
+|unittests|logic|1000s|
+|integration|contracts between components|100s|
+|system|configurations|10s|
+
+
 #### Refactoring
 You want to get the code to green in the safest, most atomic steps. After every single
 refactoring step rerun the tests to ensure each step hasn't broken anything. 
