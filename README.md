@@ -26,7 +26,7 @@ If it's there and you need to force the return value of a method, it is a stub. 
 It can be done with or with out a mock object.
 
 Without mock object:
-```$xslt
+```
 // usage
 Payment pt = new PaymentStub(true);
 
@@ -45,10 +45,11 @@ static class PaymentStub implements Payment{
 ```
 
 With mock object:
-```$xslt
-
 ```
-__dummy__
+Payment mockPt = Mockito.mock(Payment.class);
+Mockito.when(mockPt.paymentAccepted()).thenReturn(true);
+```
+__Dummy__
 
 When you need to provide a class with a mock object but you don't care about it. For example it will not be used
 in the test you are writing. It can be done with or without mock objects.
