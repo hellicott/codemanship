@@ -11,12 +11,7 @@ public class TestBuyCd{
     @Test
     public void testBuyWhenPaymentAcceptedAndInStock(){
         // arrange
-        PaymentThing pt = new PaymentThing(){
-            @Override
-            boolean paymentAccepted(){
-                return true;
-            }
-        };
+        Payment pt = new PaymentStub(true);
         CD cd = new CD(2, "", "");
         // act
         cd.buy(pt);
@@ -27,12 +22,7 @@ public class TestBuyCd{
     @Test
     public void testBuyWhenPaymentRejected(){
         // arrange
-        PaymentThing pt = new PaymentThing(){
-            @Override
-            boolean paymentAccepted(){
-                return false;
-            }
-        };
+        Payment pt = new PaymentStub(false);
         CD cd = new CD(2, "", "");
         // act
         cd.buy(pt);
@@ -43,17 +33,24 @@ public class TestBuyCd{
     @Test
     public void testBuyWhenNotInStock(){
         // arrange
-        PaymentThing pt = new PaymentThing(){
-            @Override
-            boolean paymentAccepted(){
-                return true;
-            }
-        };
+        Payment pt = new PaymentStub(true);
         CD cd = new CD(0, "", "");
         // act
         cd.buy(pt);
         // assert
         Assert.assertEquals(0, cd.getStock());
+    }
+    
+    static class PaymentStub implements Payment{
+        private boolean accepted;
+        
+        PaymentStub(boolean paymentAccepted){
+            this.accepted = paymentAccepted;
+        }
+        
+        public boolean paymentAccepted(){
+            return this.accepted;
+        }
     }
     
 }

@@ -16,7 +16,7 @@ class CD implements CdInfo{
     }
     
     
-    void buy(PaymentThing pt){
+    void buy(Payment pt){
         if((pt.paymentAccepted())&& (this.inStock())){
             this.stock--;
         }

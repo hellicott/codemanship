@@ -1,7 +1,7 @@
 package hellicott.stockmanager;
 
 class StockManager{
-    StockManager(PaymentThing pt){
+    StockManager(Payment pt){
     
     }
     boolean inCatalogue(String[] info){
