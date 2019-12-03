@@ -115,6 +115,7 @@ are not affected by changes to things they are not using.
 
 # Exersises
 ## Fibonacci
+[code](src/main/java/hellicott/fibonacci) | [tests](src/test/java/hellicott/fibonacci)
 
 Use JUnitParams to make parameterised tests. This avoids code duplication in tests, as well as src
 
@@ -131,6 +132,8 @@ Try to write in this order:
   - Run the tests to make sure you've not broken anything
 
 ## Rock paper scissors
+[code](src/main/java/hellicott/rockpaperscissors) | [tests](src/test/java/hellicott/rockpaperscissors)
+
 Write a rock paper scissors game but whenever the codes are red, you must make them green within a 60 second timer.
 If at the end of the timer the codes do not pass, you must revert to your previous commit when it was green
 
@@ -143,10 +146,14 @@ If at the end of the timer the codes do not pass, you must revert to your previo
 - get back to working code as quickly as possible
 
 ## Humpty Dumpty
+[code](src/main/java/hellicott/humptydumpty) 
+
 Try to write humpty dumpty as code. It should be easily readable. It should actually do 
 something
 
 ## Stock Manager
+[code](src/main/java/hellicott/stockmanager) | [tests](src/test/java/hellicott/stockmanager)
+
 __Buy CD__
 1. Payment accepted and CD in stock
 2. Payment rejected
