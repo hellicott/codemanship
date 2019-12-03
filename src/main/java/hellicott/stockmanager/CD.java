@@ -1,5 +1,9 @@
 package hellicott.stockmanager;
 
+interface CdInfo{
+    public String[] getInfo();
+}
+
 class CD{
     private int stock;
     
