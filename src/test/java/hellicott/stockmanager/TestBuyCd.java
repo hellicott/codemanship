@@ -17,7 +17,7 @@ public class TestBuyCd{
                 return true;
             }
         };
-        CD cd = new CD(2);
+        CD cd = new CD(2, "", "");
         // act
         cd.buy(pt);
         // assert
@@ -33,7 +33,7 @@ public class TestBuyCd{
                 return false;
             }
         };
-        CD cd = new CD(2);
+        CD cd = new CD(2, "", "");
         // act
         cd.buy(pt);
         // assert
@@ -49,7 +49,7 @@ public class TestBuyCd{
                 return true;
             }
         };
-        CD cd = new CD(0);
+        CD cd = new CD(0, "", "");
         // act
         cd.buy(pt);
         // assert

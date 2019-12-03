@@ -7,7 +7,7 @@ interface CdInfo{
 class CD implements CdInfo{
     private int stock;
     
-    CD(int stock){
+    CD(int stock, String name, String artist){
         this.stock = stock;
     }
     
