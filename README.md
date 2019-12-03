@@ -6,7 +6,7 @@ Test Driven Development: By Example _by Kent Beck_
 Refactoring: Improving the design of existing code _by Martin Fowler_
 
 ## Notes
-#### Tests
+### Tests
 A test should only have one reason to fail. You should never have multiple assert 
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
@@ -30,9 +30,8 @@ _The ones you need to create the features_
 What **feature tests** do I need to do?
 _The ones you need to achieve the goals of the business_
 
-#### Mocking
-__Stub__
-
+### Mocking
+#### Stub
 If it's there and you need to force the return value of a method, it is a stub. It is a part of the test set up.
 It can be done with or with out a mock object.
 
@@ -60,8 +59,8 @@ With mock object:
 Payment mockPt = Mockito.mock(Payment.class);
 Mockito.when(mockPt.paymentAccepted()).thenReturn(true);
 ```
-__Dummy__
 
+#### Dummy
 When you need to provide a class with a mock object but you don't care about it. For example it will not be used
 in the test you are writing. It can be done with or without mock objects.
 
@@ -75,7 +74,7 @@ With mock object:
 StockManager stockManager = new StockManager(mock(Payment.class));
 ```
 
-#### Refactoring
+### Refactoring
 You want to get the code to green in the safest, most atomic steps. After every single
 refactoring step rerun the tests to ensure each step hasn't broken anything. 
 
