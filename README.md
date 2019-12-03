@@ -18,6 +18,7 @@ statements. If you have multiple things to assert, you should have a set up meth
 do the shared code, but then separate tests for each assert statement.
 
 ####Types Of Tests
+
 |Test Type|What it's testing| How many|
 |---|---|---|
 |unittests|logic|1000s|
