@@ -2,6 +2,31 @@
 Files and notes created during [codemanship TDD training](http://www.codemanship.co.uk/tdd.html)
 with [Jason Gorman](http://www.codemanship.co.uk/about.html).
 
+__Contents:__
+[Reading List](#reading-list)
+
+[Notes](#Notes)
+- [Tests](#tests)
+  - [Types Of Tests](#types-of-tests)
+  - [How do I know what teststo write?](#how-do-i-know-what-tests-to-write?)
+- [Mocking](#mocking)
+  - [Stubs](#stub)
+  - [Dummies](#dummy)
+- [Refactoring](#refactoring)
+- [Design](#design)
+
+[Exersises](#exersises)
+- [Fibonacci](#fibonacci)
+- [Rock paper scissors](#rock-paper-scissors)
+- [Humpty Dumpty](#humpty-dumpty)
+- [Stock Manager](#stock-manager)
+- [TV Prices](#tv-prices)
+- [Solving a problem](#solving-a-problem)
+
+[Next Steps](#next-steps)
+
+---
+
 ## Reading list
 Along with [Jason's TDD book](http://www.codemanship.co.uk/tdd_jasongorman_codemanship.pdf), there is other books he recommends to complement the course
 
