@@ -2,7 +2,7 @@
 Files and notes created during [codemanship TDD training](http://www.codemanship.co.uk/tdd.html)
 with [Jason Gorman](http://www.codemanship.co.uk/about.html).
 
-__Contents:__
+## Contents:
 
 [Reading List](#reading-list)
 
@@ -45,6 +45,8 @@ A test should only have one reason to fail. You should never have multiple asser
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
 
+[[Back To Top](#codemanship)]
+
 #### Types Of Tests
 
 |Test Type|What it's testing| How many|
@@ -52,6 +54,8 @@ do the shared code, but then separate tests for each assert statement.
 |unittests|logic|1000s|
 |integration|contracts between components|100s|
 |system|configurations|10s|
+
+[[Back To Top](#codemanship)]
 
 #### How do I know what tests to write?
 
@@ -63,6 +67,8 @@ _The ones you need to create the features_
 
 What **feature tests** do I need to do?
 _The ones you need to achieve the goals of the business_
+
+[[Back To Top](#codemanship)]
 
 ### Mocking
 #### Stub
@@ -94,6 +100,8 @@ Payment mockPt = Mockito.mock(Payment.class);
 Mockito.when(mockPt.paymentAccepted()).thenReturn(true);
 ```
 
+[[Back To Top](#codemanship)]
+
 #### Dummy
 When you need to provide a class with a mock object but you don't care about it. For example it will not be used
 in the test you are writing. It can be done with or without mock objects.
@@ -108,12 +116,16 @@ With mock object:
 StockManager stockManager = new StockManager(mock(Payment.class));
 ```
 
+[[Back To Top](#codemanship)]
+
 ### Refactoring
 You want to get the code to green in the safest, most atomic steps. After every single
 refactoring step rerun the tests to ensure each step hasn't broken anything. 
 
 You should be using version control to ensure that you can go back to the last thing 
 that worked easily.
+
+[[Back To Top](#codemanship)]
 
 ### Design
 Most important things in software design...
@@ -156,6 +168,8 @@ implementation of that object. Dependency injection allows this and allows mocki
 they care about. It allows you to hide things that don't need to be seen by a client so they 
 are not affected by changes to things they are not using.
 
+[[Back To Top](#codemanship)]
+
 # Exersises
 ## Fibonacci
 [code](src/main/java/hellicott/fibonacci) | [tests](src/test/java/hellicott/fibonacci)
@@ -173,6 +187,8 @@ Try to write in this order:
   - If not - refactor!
 - After any refactoring 
   - Run the tests to make sure you've not broken anything
+  
+[[Back To Top](#codemanship)]
 
 ## Rock paper scissors
 [code](src/main/java/hellicott/rockpaperscissors) | [tests](src/test/java/hellicott/rockpaperscissors)
@@ -188,6 +204,8 @@ If at the end of the timer the codes do not pass, you must revert to your previo
 - only create methods, classes, parameters when you need to
 - get back to working code as quickly as possible
 
+[[Back To Top](#codemanship)]
+
 ## Humpty Dumpty
 [code](src/main/java/hellicott/humptydumpty) 
 
@@ -197,6 +215,7 @@ something
 Here's the output of the program I wrote:
 ![alt text](img/humptyDumptyOutputPNG.PNG "Humpty Dumpty Output")
 
+[[Back To Top](#codemanship)]
 
 ## Stock Manager
 [code](src/main/java/hellicott/stockmanager) | [tests](src/test/java/hellicott/stockmanager)
@@ -223,6 +242,8 @@ __Review CD__
 We added stubs as test doubles to allow us to test with set definitions
 of whether the method would return true or false.
 
+[[Back To Top](#codemanship)]
+
 ## Tv prices
 [code](src/main/java/hellicott/tvprices) | [tests](src/test/java/hellicott/tvprices)
 1. Which retailer gives the customer the lowest price for a specific make and model?
@@ -230,6 +251,8 @@ of whether the method would return true or false.
 
 While writing this used a `@Before` tag on a set up of a test so that I could separate 
 the two asserts I wanted to make into different tests without duplicating code.
+
+[[Back To Top](#codemanship)]
 
 ## Solving a problem
 [code](src/main/java/hellicott/problemgenerator) | [tests](src/test/java/hellicott/problemgenerator)
@@ -277,6 +300,8 @@ AND     I click "generate problem"
 THEN    I am shown a problem related to the tag
 ```
 
+[[Back To Top](#codemanship)]
+
 # Next Steps
 - Code Katas are a good way to practice with mini problem solving exercises
   - I find [code wars](https://www.codewars.com/) a great source of coding Katas
@@ -285,3 +310,5 @@ THEN    I am shown a problem related to the tag
   progress
 - Any questions, you can email Jason and he'll try to reply within 48 hours
   - training@codemanship.com
+  
+  [[Back To Top](#codemanship)]
