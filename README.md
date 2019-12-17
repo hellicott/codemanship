@@ -45,6 +45,17 @@ A test should only have one reason to fail. You should never have multiple asser
 statements. If you have multiple things to assert, you should have a set up method to 
 do the shared code, but then separate tests for each assert statement.
 
+
+As soon as you change your code, it is like Schrodinger's code: all tests may be simultaneously 
+both passing and failing. The only way you can know is by running the tests again. Therefore 
+you should run your tests often and minimise the time they could be failing.
+
+**Ask yourself**
+> If someone asked you to release your code right now, how long would it take you to have all your tests 
+> passing? 
+It shouldn't be more than a minute. You should be able to revert back to your most recent commit 
+(which shouldn't be older than a few minutes) where the tests should all have been passing.
+
 [[Back To Top](#codemanship)]
 
 #### Types Of Tests
@@ -67,6 +78,7 @@ _The ones you need to create the features_
 
 What **feature tests** do I need to do?
 _The ones you need to achieve the goals of the business_
+
 
 [[Back To Top](#codemanship)]
 
@@ -160,8 +172,6 @@ features in another class. It implies this method is in the wrong place.
     This is a good example of _Somebody else's Problem_ instead of _Feature Envy_. Another 
     advantage of doing this means that now you can have a room of a different shape. It no 
     longer matters to `CarpetQuote` it's all `Room`'s problem.
-    As soon as you change your code, it is like Schrodinger's code. It both passes and 
-    fails all tests. The only way you can know is by running the tests again. 
 7. __Swappable dependencies.__ A class that uses another object shouldn't care about 
 implementation of that object. Dependency injection allows this and allows mocking too.
 8. __Client specific interfaces.__ This allows you to only expose to a client the parts that
