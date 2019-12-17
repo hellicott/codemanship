@@ -53,6 +53,7 @@ you should run your tests often and minimise the time they could be failing.
 **Ask yourself**
 > If someone asked you to release your code right now, how long would it take you to have all your tests 
 > passing? 
+
 It shouldn't be more than a minute. You should be able to revert back to your most recent commit 
 (which shouldn't be older than a few minutes) where the tests should all have been passing.
 
